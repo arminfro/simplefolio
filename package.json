@@ -6,6 +6,7 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
+    "dev": "parcel serve",
     "build": "parcel build"
   },
   "repository": {
