@@ -287,14 +287,62 @@
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper load-hidden">
-          <p class="contact-wrapper__text">[Put your call to action here]</p>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            class="cta-btn cta-btn--resume"
-            href="mailto:example@email.com"
-            >Call to Action</a
+          <p class="contact-wrapper__text" id="contact-status" 
+            data-success-msg="Thank you for your message!"
+            data-error-msg="Unfortunately there was an error sending the E-Mail. Please try again later.">
+            [Put your call to action here]
+          </p>
+          <form
+            method="post"
+            id="form"
+            class="contact-wrapper__form"
           >
+            <div class="contact-wrapper__short-fields">
+              <div class="contact-wrapper__field">
+                <label class="contact-wrapper__label" for="name">Name</label>
+                <input
+                  required
+                  placeholder="Enter Your Name"
+                  type="text"
+                  class="contact-wrapper__input js-contact-field"
+                  name="firstName"
+                  id="name"
+                />
+              </div>
+              <div class="contact-wrapper__field">
+                <label class="contact-wrapper__label" for="email">E-Mail</label>
+                <input
+                  required
+                  placeholder="Enter Your E-Mail"
+                  type="email"
+                  class="contact-wrapper__input js-contact-field"
+                  name="from"
+                  id="email"
+                />
+              </div>
+            </div>
+            <div class="contact-wrapper__field">
+              <label class="contact-wrapper__label" for="message"
+                >Message</label
+              >
+              <textarea
+                required
+                rows="7"
+                class="contact-wrapper__input js-contact-field"
+                placeholder="Enter Your Message"
+                name="body"
+                id="message"
+              ></textarea>
+            </div>
+            <input type="hidden" name="subject" value="Contactform"></input>
+            <h-captcha id="signupCaptcha" site-key="" size="normal" tabindex="0"></h-captcha>
+            <button
+              type="submit"
+              class="cta-btn cta-btn--resume contact-wrapper__button"
+            >
+              Send
+            </button>
+          </form>
         </div>
       </div>
     </section>
