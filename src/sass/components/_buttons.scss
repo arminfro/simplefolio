@@ -82,6 +82,13 @@
   }
 }
 
+.cta-btn--landing {
+  margin-right: 0.8rem;
+  @include respond(phone) {
+    margin-top: 0.8rem;
+  }
+}
+
 /* Resume Style */
 .cta-btn--resume {
   color: $white-color;
