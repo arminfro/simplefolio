@@ -24,7 +24,7 @@
         { pkgs, system, ... }:
         {
           packages = import ./pkgs { inherit pkgs; };
-          devShells.${system} = pkgs.mkShell {
+          devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [
               ungoogled-chromium
               nodePackages.nodejs
