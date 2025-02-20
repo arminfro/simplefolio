@@ -1,6 +1,6 @@
 # Simplefolio ⚡️ [![GitHub](https://img.shields.io/github/license/cobiwave/simplefolio?color=blue)](https://github.com/cobiwave/simplefolio/blob/master/LICENSE.md) ![GitHub stars](https://img.shields.io/github/stars/cobiwave/simplefolio) ![GitHub forks](https://img.shields.io/github/forks/cobiwave/simplefolio)
 
-## A minimal portfolio template for Developers!
+## A minimal portfolio template for Developers
 
 <h2 align="center">
   <img src="https://github.com/cobiwave/gatsby-simplefolio/blob/master/examples/example.gif" alt="Simplefolio" width="600px" />
@@ -26,6 +26,24 @@ To view the demo: **[click here](https://the-simplefolio.netlify.app/)**
 - Professional way to showcase your work
 - Increases your visibility and online presence
 - Shows you’re more than just a resume
+
+## Why have I forked this?
+
+- add contact form
+- add nix module support with [mailform](https://github.com/Feuerhamster/mailform)
+
+```nix
+  services = {
+    simplefolio = {
+      enable = true;
+      domain = "localhost";
+      subDomain = "about";
+      mailform = {
+        port = 1134;
+      };
+    };
+  };
+```
 
 ## Getting Started 🚀
 
@@ -106,7 +124,7 @@ Once your server has started, go to this url `http://localhost:1234/` to see the
 
 ---
 
-## Template Instructions:
+## Template Instructions
 
 ### Step 1 - STRUCTURE
 
