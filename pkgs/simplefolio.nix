@@ -11,7 +11,7 @@ buildNpmPackage {
   inherit version;
 
   src = ../.;
-  npmDepsHash = "sha256-g4NqPePVsEbf50jc2WpBrsCdHhH9x1DVFDut8kK1P4I=";
+  npmDepsHash = "sha256-Hj2sOZwapgkzqt2+5oOfeE6M64XSXAa429bfVXaHfiE=";
 
   buildPhase = ''
     runHook preBuild
