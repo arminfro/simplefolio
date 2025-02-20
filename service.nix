@@ -14,7 +14,7 @@ let
   dataDir = "/var/lib/mailform";
   defaultTargetsDir = "${dataDir}/targets";
   mailFormPortStr = builtins.toString cfg.mailform.port;
-  appDomain = "${cfg.subDomain}.${cfg.domain}";
+  appDomain = "${if cfg.subDomain != null then "${cfg.subDomain}." else ""}${cfg.domain}";
 in
 {
   options.services.simplefolio = {
